@@ -49,7 +49,7 @@ export class UserEntity {
         this.password = user?.password;
         this.pathImage = user?.pathImage;
         this.createdAt = user?.createdAt;
-        this.deletedAt = user?.updatedAt;
+        this.updatedAt = user?.updatedAt;
         this.deletedAt = user?.deletedAt;
     }
 }
