@@ -6,13 +6,14 @@ import { UsersService } from './users.service';
 @Controller('app/v1/users')
 export class UsersController {
     constructor(private userService: UsersService) {}
+    
     @Get()
     async findAll() {
         return await this.userService.findAll();
     }
 
-    @Get('id')
-    async findById(@Param('id', new ParseUUIDPipe()) id: string) {
+    @Get(':id')
+    async findById(@Param('id') id: string) {
         return await this.userService.findById(id);
     }
 
@@ -21,7 +22,7 @@ export class UsersController {
         return await this.userService.create(body);
     }
 
-    @Put('id')
+    @Put(':id')
     async update( 
         @Param('id', new ParseUUIDPipe()) id: string,
         @Body() body: UpdateUserDto
@@ -29,7 +30,7 @@ export class UsersController {
         return await this.userService.update(id, body);
     }
 
-    @Delete('id')
+    @Delete(':id')
     async remove(@Param('id', new ParseUUIDPipe()) id: string) {
         return await this.userService.remove(id);
     }

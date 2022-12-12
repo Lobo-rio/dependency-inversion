@@ -18,7 +18,6 @@ export class UserRepository implements IUserRepository {
     }
     async findById(id: string): Promise<UserEntity | NotFoundException> {
         const user = await this.userRepository.findOne({ where: { id } });
-
         if (!user) return new NotFoundException('User not found!'); 
        
         return user;
