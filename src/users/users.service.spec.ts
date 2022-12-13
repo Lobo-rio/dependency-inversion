@@ -40,16 +40,19 @@ describe('UsersService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [{
-        provide: UsersService,
-        useValue: {
-          findAll: jest.fn().mockRejectedValue(usersEntityList),
-          findById: jest.fn(),
-          create: jest.fn(),
-          update: jest.fn(),
-          remove: jest.fn()
-        }  
-      }],
+      providers: [
+        
+        {
+          provide: UsersService,
+          useValue: {
+            findAll: jest.fn().mockRejectedValue(usersEntityList),
+            findById: jest.fn(),
+            create: jest.fn(),
+            update: jest.fn(),
+            remove: jest.fn()
+          }  
+        }
+      ],
     }).compile();
 
     service = module.get<UsersService>(UsersService);

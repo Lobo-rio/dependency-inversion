@@ -43,16 +43,19 @@ describe('UsersController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UsersController],
-      providers: [{
-        provide: UsersService,
-        useValue: {
-          findAll: jest.fn().mockRejectedValue(usersEntityList),
-          findById: jest.fn(),
-          create: jest.fn(),
-          update: jest.fn(),
-          remove: jest.fn()
-        }  
-      }],
+      providers: [
+        
+        {
+          provide: UsersService,
+          useValue: {
+            findAll: jest.fn().mockRejectedValue(usersEntityList),
+            findById: jest.fn(),
+            create: jest.fn(),
+            update: jest.fn(),
+            remove: jest.fn()
+          }  
+        }
+      ],
     }).compile();
 
     usersController = module.get<UsersController>(UsersController);
