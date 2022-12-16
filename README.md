@@ -28,6 +28,4 @@ $ npm run start:prod
 ### GitHub Analytics
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Lobo-rio)](https://github.com/lobo-rio/github-readme-stats)
 
-[![Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username={username}&theme=vue)
-
 Nest is [MIT licensed](LICENSE).
