@@ -5,10 +5,13 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+<<<<<<< HEAD
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
+=======
+>>>>>>> refs/remotes/origin/main
 
 #### Installation
 
@@ -31,7 +34,10 @@ $ npm run start:prod
 
 ### GitHub Analytics
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Lobo-rio)](https://github.com/lobo-rio/github-readme-stats)
+<<<<<<< HEAD
 
 [![Profile Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username={username}&theme=vue)
+=======
+>>>>>>> refs/remotes/origin/main
 
 Nest is [MIT licensed](LICENSE).
