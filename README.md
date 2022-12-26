@@ -5,6 +5,8 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
+
 
 #### Installation
 ```bash
@@ -22,6 +24,11 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+```
+### Documentation the app
+
+```http
+http://localhost:3000/api-documents
 ```
 
 ### GitHub Analytics
