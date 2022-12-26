@@ -1,5 +1,4 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { hashSync } from 'bcryptjs';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { IUserRepository } from './interfaces/user-repository.interface';
@@ -20,8 +19,6 @@ export class UsersService {
     }
 
     async create(data: CreateUserDto) {
-        const hashPassword = hashSync(data.password, 10);
-        data.password = hashPassword;
         return await this.userRepository.create(data);
     }
 

@@ -1,5 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
+import { hashSync } from "bcryptjs";
 import { 
+    BeforeInsert,
     Column,
     CreateDateColumn,
     DeleteDateColumn,
@@ -41,6 +43,11 @@ export class UserEntity {
     @DeleteDateColumn({ name: 'deleted-at' })
     @ApiProperty()
     deletedAt: string;
+
+    @BeforeInsert()
+    hashPassword() {
+        this.password = hashSync(this.password, 10);
+    }
 
     constructor(user?: Partial<UserEntity>) {
         this.id = user?.id;

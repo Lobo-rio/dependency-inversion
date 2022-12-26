@@ -14,7 +14,9 @@ export class UserRepository implements IUserRepository {
     ) {}
             
     async findAll(): Promise<UserEntity[]> {
-        return await this.userRepository.find();
+        return await this.userRepository.find({
+            select: ['id', 'name', 'email', 'pathImage', 'createdAt'],
+        });
     }
     async findById(id: string): Promise<UserEntity | NotFoundException> {
         const user = await this.userRepository.findOne({ where: { id } });
